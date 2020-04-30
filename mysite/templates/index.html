@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>word-Remover</title>
+    </head>
+    <body style="background-color: azure;">
+        <div>
+            <h1>Welcome to our first Django web site</h1>
+            <h2>It is a word-Remover</h2>
+           
+            <form action="/data/" method="post" >{% csrf_token %}
+                <!--waise to method default get ka hota but data zyaada ho jaye to data
+                block ho jata h isliye yaha method post kr diya ab ye kitna bhi lamba data 
+            url k through send kr deta h
+                NOTE: agar post likhoge to action wali cheez (/ data/) aise likhna default(get) mai aise (/data) chal jata h -->
+
+            <!--csrf (croos site request forgery matlab ki jo request aa rhi h vo meri hi site se aa
+            rhi h koi dusra banda bahar se request maar k attack nhi kr raha meri website pr-->
+                Enter the text : <br>
+                <textarea name="text" style="margin: 0px; width: 556px; height: 56px;"></textarea>
+                <br><br>
+                Enter the word : 
+                <input name="word" type="text"><br><br>
+                <input type="checkbox" name="check_box">Confirm submit<br>
+                <button type="submit">Submit Text</button>
+            </form><br><br>
+            <h3>This website is created by {{Name}} , he is a {{Designation}} and learning Django.</h3>
+        </div>
+       
+    </body>
+</html>
